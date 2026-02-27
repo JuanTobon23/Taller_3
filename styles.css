@@ -12,10 +12,39 @@ p {
     font-size: 20px;
 }
 
-a {
+header a {
     color: red;
     font-size: 20px;
     text-decoration: none;  
+}
+
+footer a {
+    color: red;
+    font-size: 20px;
+    text-decoration: none;  
+}
+
+a {
+transition: color 0.3s ease;
+}
+header a:hover {
+color: white;
+
+}
+
+footer a:hover {
+color: white;
+
+}
+
+section a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;  
+}
+
+section a:hover {
+    color: red;
 }
 
 .section {
@@ -45,15 +74,18 @@ width: 100%;
 }
 
 footer {
+    display: flex;
 background-color: black;
 color: white;
-padding: 20px;
+padding: 20px 0;
 text-align: center;
+width: 100%;
+margin-top: auto;
 }
 
 .container { /* Clase para centrar el contenido del header y footer */
 display: flex;
-justify-content: space space-between; /* Alineación horizontal */
+justify-content: space-between; /* Alineación horizontal */
 align-items: center; /* Alineación vertical */
 gap: 20px; /* Espacio entre elementos */
 list-style: none; /* Eliminar viñetas de la lista */
@@ -90,4 +122,73 @@ img {
 max-width: 100%;
 height: auto;
 }
+}
+
+
+
+
+
+main {
+    flex: 1;
+}
+
+footer.container {
+    width: 100%;           /* Ocupa todo el ancho */
+    background-color: #000; /* Mantengo el negro de tu imagen */
+    color: white;
+    padding: 20px 5%;
+    display: flex;         /* Activa Flexbox */
+    justify-content: center; /* Centra todo el bloque */
+}
+
+.nav-links {
+    display: flex;         /* Pone el título "Mis redes" y la lista en fila */
+    align-items: center;   /* Los alinea verticalmente */
+    gap: 20px;             /* Espacio entre el título y los enlaces */
+}
+
+.nav-links h2 {
+    margin: 0;             /* Quita el espacio extra que traen los h2 */
+    font-size: 1.2rem;
+}
+
+footer ul {
+    display: flex;         /* Pone los enlaces de GitHub e Instagram en fila */
+    list-style: none;      /* ¡CLAVE! Quita los puntos negros */
+    margin: 0;
+    padding: 0;            /* Quita el espacio que empuja la lista a la derecha */
+    gap: 15px;             /* Espacio entre GitHub e Instagram */
+}
+
+footer a {
+    color: red;            /* Según tu imagen, los quieres rojos */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Esto configura toda la página como una gran caja flexible vertical */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    margin: 0;
+}
+
+/* El contenido principal crecerá para ocupar todo el espacio sobrante */
+main {
+    flex: 1; 
+}
+
+/* Ahora tu footer se quedará abajo automáticamente */
+footer.container {
+    width: 100%;
+    background-color: #000;
+    margin-top: auto; /* Refuerzo para empujar hacia abajo */
+}
+
+img {
+max-width: 100%; 
+height: auto;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
